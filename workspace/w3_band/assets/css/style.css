@@ -1,0 +1,500 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* cuộn */
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.text-while {
+    color: #fff  !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+/* Sang phải */
+.pull-right {
+    float: right !important;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third{
+    width: 33.3333%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+
+#main {
+
+}
+
+#header {
+    /* tạo ra thanh header  */
+    height: 46px;
+    background-color: black;
+
+    /*Làm cho header bám dính ở đầu trang khi cuộn chuột*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* cố định header khi thêm ảnh ở slider */
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;   
+}
+
+#nav li{
+    /* chữ nảy lên thanh header */
+    
+    /* chưa còi thsy đổi */
+    position: relative;
+}
+
+#nav > li {
+    /* k thay đổi gì */
+    display: inline-block;
+}
+
+#nav > li > a{
+    /* chữ chuyển thành màu trắng, có gạch chân các chữ */
+    color: #fff;
+    /* k thay đổi gì */
+    display: block;
+    /* mất gạch chân dưới chữ */
+    text-decoration: none;
+    /* chỉ còn lại chữ More và con của More, các chữ ngang hNGF VỚI mORE MẤT , con của More nằm ngoài thanh header và có gạch chân ở con*/
+    /* tạo khoảng cách giữa các chữ */
+    line-height: 46px;
+    padding: 0 24px;
+
+}
+
+#nav li a {
+    /* mất gạch chân ở con More */
+    text-decoration: none;
+}
+
+/* các chữ ngang hàng vói More hiện trên thanh header, k hiện thanh của More */
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 1px 10px 0px rgba(0 0 0 / 0.3);
+}
+
+
+/* di chuyển chuột tới đâu thì đổi nền chỗ đó thành màu xám, chưa thấy con của More*/
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* k thay đổi */
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+
+/* đã thấy thêm con của More nhưng chưa theo dạng mỗi con 1 dòng , di chuyển vào con nào thì con đó cũng đổi nền thành xám*/
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+
+/* di chuyển vào More thì tất cả con đều đổi nền thành xám */
+#nav li:hover a{
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+
+
+/* con của More mỗi con 1 dòng */
+#nav .subnav li{
+    min-width: 128px;
+}
+
+
+
+/* k thay đổi */
+#nav .subnav a{
+    /* text-decoration: none; */
+    color: #000;
+    padding: 0 12px;
+    line-height: 28px;
+    display: block;
+}
+
+/*Bắt đầu Tạo nút tìm kiếm */
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    /* cho icon tìm kiếm sang phải */
+    float:right;  
+    padding: 0 21px;
+    
+}
+
+#header .search-btn:hover{
+    /* thay con trỏ chuột thành hình bàn tay khi di chyển vào những nút mà người dùng có thể bấm vào được */
+    cursor: pointer;
+    background-color: rgb(235, 72,72);
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    /* cho icon tìm kiếm vào giữa dòng header */
+    line-height: 46px;
+}
+/* Tạo xong nút tìm kiếm */
+
+
+
+#slider {
+    /* position: relative; */
+    /* để slider k đè ảo lên header */
+    margin-top: 46px;
+    padding-top: 50%;
+    /* thêm ảnh */
+    background: url('../img/slider1.jpg') top center / cover no-repeat;
+
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+    
+    /* chữ The atmosphere in New york ra giữa */
+    /* width: 100%; */
+    left: 50%;
+    transform: translateX(-50%);
+    /* chữ New York ra giữa */
+    text-align: center;
+}
+
+#slider .text-heading{
+    /* giảm độ dày chữ */
+    font-weight: 500;
+    /* cỡ chữ */
+    font-size: 24px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content {
+
+}
+
+#content .content-section{
+    width: 800px;
+    /* tạo khoảng cách giữa chữ với ảnh */
+    padding: 64px 0 112px;
+    /* căn phần chữ giới thiệu về nhóm nhạc ra giữa */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    /* cho chữ THE BAND ra giữa */
+    text-align: center;
+    font-weight: 500;
+    /* Tăng khoảng cách giữa các chữ cái của từ THE BAND --> T H E B A N D */
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    /* chữ We love music ra giữa */
+    text-align: center;
+    /* tạo khoảng cách giữa dòng THE BAND và dòng We love music */
+    margin-top: 25px;
+    /* cho chữ We love music thành cữ nghiêng */
+    font-style: italic;
+    /* cho chữ we love music mờ đi xíu */
+    opacity: 0.6;
+
+}
+
+#content .about-text {
+    /* tạo khoảng cách giữa dòng We love music và đoạn văn */
+    margin-top: 25px;
+    font-size: 15px;
+    /* căn thẳng chữ ở 2 mép */
+    text-align: justify;
+    /* khoảng cách giữa các dòng trong đoạn văn */
+    line-height: 1.4;
+}
+
+#content .members-list{
+    /* tạo khoảng cách giữa đoạn văn với ảnh */
+    margin-top: 48px;
+}
+
+/* #content .member-item{ */
+    /* kéo ảnh sang trái, các ảnh nối tiếp nhau */
+    /* float: left; do có col */
+    /* tràn các ảnh ra hết dòng */
+    /* width: calc(100% / 3);  do có col*/
+    /* width: 33.33333%; */
+    /* căn cả name và img */
+    /* text-align: center;
+} */
+
+#content .member-name{
+    /* tên ra giữa ảnh */
+    font-size: 15px;
+    text-align: center;
+}
+
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section{
+    background-color: #000;
+}
+
+.tickets-list{
+    /* bỏ 3 dấu chấm ở đầu mỗi dòng */
+    list-style: none;
+    background-color: #fff;   
+    margin-top: 40px;
+
+}
+
+.tickets-list li {
+    /* đường phân cách 3 tháng */
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    background-color: red;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color:#000 ;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px ;
+}
+
+
+/* Place */
+.place-list{
+    /* margin-top: 32px; */
+    /* cho 2 mép ảnh của 2 ảnh ngoài cùng sát ra mép */
+    /* margin-left: -8px;
+    margin-right: -8px; */
+    /* viết gộp */
+    /* margin: 32px -8px 0 */
+
+    /* padding-bottom: 48px; */
+
+
+    /* làm kiểu row */
+    margin-top: 32px;
+    /* margin-bottom: 48px; */
+}
+/* .place-item{ */
+    /* bỏ Float và padding vì có col */
+    /* float: left; */
+    /* width: 33.3333%; */
+    /* padding: 0 8px; */
+/* } */
+.place-img{
+    width: 100%;
+    /* xóa khoảng cách giữa ảnh vs chữ bên dưới */
+    display: block;
+}
+
+/* di chuột vào ảnh thì ảnh mờ xám */
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+
+
+/* Contact from */
+.contact-content{
+    /*  tạo k/c giữa khung name, email và  chữ Fan */
+    margin-top: 48px;
+
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* outline: none; */
+}
+
+/* .contact-form .form-submit-btn{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+} */
+
+/* Map section */
+.map-section img {
+    width: 100%;
+}
+
+/* Footer section */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
+}

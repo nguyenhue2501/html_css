@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main{
+
+}
+
+.photo img{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    bottom: 0;
+    display: block;
+}
+
+
+.font_size{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+.header li:hover{
+    background-color: #fff;
+}
+
+.header li:hover a{
+    color: #000;
+
+}
+
+
+.chia{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+
+.header{
+    background-color: rgb(40, 79, 156);
+
+    height: 50px;
+    /* padding: 15px; */
+    justify-content: space-between;
+    text-decoration: none;
+    padding-left: 20px;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    right: 0;
+
+}
+
+.admin{
+    width: 50px;
+}
+
+.lead{
+    width: 120px;
+}
+
+.student{
+    width: 134px;
+}
+
+.logout{
+    width: 50px;
+}
+
+.help{
+    width: 35px;
+}
+
+.pad{
+    padding-left: 3px;
+
+}
+
+.nav-current{
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.header li, .header p {
+    display: inline-block;
+    margin-right: 20px;
+    height: 50px;
+    padding-top: 15px;
+    /* position: fixed;
+    width: 100%; */
+}
+
+/* .white{
+    background-color: #fff;
+    color: black;
+} */
+
+.header li a{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.body{
+    /* position: absolute; */
+    height: 600px;
+}
+
+.menu{
+
+}
+
+.toolbar{
+    background-color: rgb(23, 49, 97);
+    
+    width: 300px;
+    padding-left: 20px;
+    padding-top: 25px;
+    /* height: 90%; */
+}
+
+.toolbar_content li{
+    height: 30px;
+    /* text-align: center; */
+    padding: 6px;
+    list-style-type: none;
+}
+
+.toolbar_content li a{
+
+}
+
+
+.toolbar_content li:hover{
+    background-color: #fff;
+    cursor: pointer;
+    color: #000;
+}
+
+.ti-arrow-circle-right{
+    padding-right: 10px;
+}
+
+
+.toolbar hr{
+    color: #fff;
+    border-bottom: none;
+    /* margin-bottom: 5px; */
+}
+
+
+/*Begin  body_right */
+
+.content{
+    /* padding-right: 930px; */
+    padding-left: 30px;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.title{
+    color: crimson;
+    font-size: 20px !important;
+    margin-bottom: 20px;
+}
+
+.add_new{
+    background-color: rgb(40, 79, 156);
+
+    padding-left: 20px;
+    height: 40px;
+    padding-top: 12px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.add_new i{
+    margin-right: 5px;
+}
+
+.ti-files{
+    font-size: small;
+}
+
+.name{
+    margin-bottom: 15px;
+}
+
+.alpha{
+    margin-bottom: 15px;
+}
+
+.alpha a{
+    margin-right: 5px;
+    color: crimson;
+    text-decoration: none;
+}
+
+.alpha a:hover{
+    color: rgb(224, 129, 129);
+}
+
+.all{
+    color: rgb(68, 66, 66) !important;
+}
+
+.name{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+
+input[type=text]{
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+input[type=text]:focus{
+    border: 1px solid rgb(182, 179, 179);
+}
+
+
+.name .search{
+    height: 30px;
+    width: 60px;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    font-size: 13px;
+    width: 100%;
+  }
+  
+.ti-angle-right{
+    font-size: xx-small;
+    margin-right: 10px;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+  /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+  
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(40, 79, 156);
+
+  color: white;
+}
+
+
+.next button{
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+.footer{
+    height: 50px;
+    margin-top:30px;
+    text-align: center;
+
+}
+
+.footer p{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.footer hr{
+    /* color: rgb(226, 228, 231); */
+    border: 1px solid rgb(219, 218, 218);
+    border-bottom: none;
+
+}
